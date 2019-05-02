@@ -12,6 +12,7 @@ $accent-color: #65e496;
 body {
 	font-family: 'Roboto Slab', serif;
 	display: block;
+	position: absolute;
 }
 
 .wrap {
@@ -24,7 +25,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: $light-color;
-	margin-bottom: 50px;
+	padding-bottom: 160px;
 }
 .header {
 	display: flex;
@@ -66,12 +67,16 @@ body {
 }
 
 .block-text {
-	flex-basis: calc(90% - 500px);
+	flex-basis: calc(100% - 500px);
 	&__name {
 		font-family: 'Open Sans', serif;
 		font-size: 18px;
-		letter-spacing: 0.7px;
-		margin-bottom: 30px;
+		letter-spacing: 1.4px;
+		margin-top: 1px;
+		margin-bottom: 30px;		
+	}
+	&__name-top {
+		padding-top: 16px;
 	}
 	&__title {
 		font-size: 48px;
@@ -91,7 +96,8 @@ body {
 		font-size: 15px;
 		line-height: 24px;
 		margin-bottom: 24px;
-		letter-spacing: 0.7px;
+		padding-right: 65px;
+		letter-spacing: 0.75px;
 	}
 	&__btn {
 		display: block;
@@ -104,7 +110,12 @@ body {
 		font-weight:18px;
 		padding: 15px 0;
 		margin-top: 48px;
-		letter-spacing: 0.7px;
+		letter-spacing: 0.75px;
+	}
+	&__small {
+		display: block;
+		margin-top: 20px;
+		font-style: italic;
 	}		
 }
 
@@ -120,3 +131,27 @@ body {
 		flex-basis: 500x;
 	}	
 }
+
+.page {
+	padding-top: 160px;
+}
+
+.book-author {
+	display: flex;
+	justify-content: space-between;
+}
+
+.block-ava {
+	position: relative;
+	&__svg {
+		position: absolute;
+		right: 0;
+		z-index: -1;
+	}
+	&__img {
+		padding-top: 50px;
+		padding-right: 40px;
+	}
+}
+
+
