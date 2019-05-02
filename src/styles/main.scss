@@ -5,19 +5,35 @@
 @import "general/base";
 @import "../blocks/blocks";
 
+$light-color: #fff;
+$accent-color: #65e496;
+
 
 body {
 	font-family: 'Roboto Slab', serif;
+	display: block;
+}
+
+.wrap {
+	max-width: 1170px;
+	margin: 0 auto;
 }
 
 .page-main {
 	background: url(../img/bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	color: $light-color;
+	margin-bottom: 50px;
 }
 .header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	max-width: 1170px;
+	margin: 0 auto;
+	margin-bottom: 130px;
+	padding: 50px;
 	&__logo {
 		display: block;
 		width: 137px;
@@ -28,8 +44,79 @@ body {
 		list-style-type: none;
 		display: flex;
 		justify-content: flex-end;
+		font-family: 'Open Sans', serif;
 		&__item {
-		margin-left: 15px;
+			margin-left: 22px;
+			padding-bottom: 5px;
+			border-bottom: 3px solid transparent;
+			transition: 0.3s;
+			&:hover {
+				border-bottom: 3px solid $accent-color;
+			}
+		}
+		&__item.active {
+			border-bottom: 3px solid $accent-color;
+		}
+		&__link {
+			color: $light-color;
+			text-decoration: none;
+			letter-spacing: 0.5px;
 		}
 	}
+}
+
+.block-text {
+	flex-basis: calc(90% - 500px);
+	&__name {
+		font-family: 'Open Sans', serif;
+		font-size: 18px;
+		letter-spacing: 0.7px;
+		margin-bottom: 30px;
+	}
+	&__title {
+		font-size: 48px;
+		font-weight: 700;
+		letter-spacing: 1.8px;
+		margin-bottom: 40px;
+		span {
+			letter-spacing: 0.9px;
+			display: block;
+			color: $accent-color;
+			font-size: 18px;
+			margin-top: 9px;
+		}
+	}
+	&__description {
+		font-family: 'Open Sans', serif;
+		font-size: 15px;
+		line-height: 24px;
+		margin-bottom: 24px;
+		letter-spacing: 0.7px;
+	}
+	&__btn {
+		display: block;
+		max-width: 250px;
+		background-color: $accent-color;
+		color: $light-color;
+		text-decoration: none;
+		border-radius: 3px;
+		text-align: center;
+		font-weight:18px;
+		padding: 15px 0;
+		margin-top: 48px;
+		letter-spacing: 0.7px;
+	}		
+}
+
+.block-book {
+	display: flex;
+	justify-content: space-between;
+	&-demo {
+		display: block;
+		width: 446px;
+		height: 641px;
+		background-image: url(../img/book.svg);		
+		background-repeat: no-repeat;
+		flex-basis: 500x;
+	}	
 }
