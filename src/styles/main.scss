@@ -229,16 +229,14 @@ h3 {
 		display: inline-flex;
 		flex-direction: row;
 		&_list {
-			display: inline-flex;
-			flex-direction: row;					
-			li {
-				list-style-type: none;
+			list-style-type: none;	padding: 2px 20px;				
+			&>li {
+				display: inline-block;
 				width: 25px;
-				padding: 14px 8px;		
-			}
-			&_img {
-				max-width: 25px;
-				padding: 3px;
+				padding: 14px 2px;
+				&>a {
+					color: $accent-color;
+				}
 			}
 		}
 	}
