@@ -28,6 +28,7 @@ h3
 {
 	max-width: 1170px;
 	margin: 0 auto;
+	padding: 0 15px;
 }
 .page-main 
 {
@@ -36,6 +37,10 @@ h3
 	background-size: cover;
 	color: $light-color;
 	padding-bottom: 160px;
+	@media(max-width: 400px)
+	{
+		padding-bottom: 30px;
+	}
 }
 .header 
 {
@@ -46,6 +51,15 @@ h3
 	margin: 0 auto;
 	margin-bottom: 130px;
 	padding: 50px;
+	@media(max-width: 1020px)
+	{
+		flex-direction: column;
+		line-height: 30px;
+	}
+	@media(max-width: 920px)
+	{
+		padding-bottom: 0;
+	}	
 	&__logo 
 	{
 		display: block;
@@ -59,6 +73,10 @@ h3
 		display: flex;
 		justify-content: flex-end;
 		font-family: 'Open Sans', serif;
+		@media(max-width: 800px)
+		{
+			flex-flow: column;
+		}
 		&__item 
 		{
 			margin-left: 22px;
@@ -85,9 +103,17 @@ h3
 .block-text 
 {
 	flex-basis: calc(100% - 500px);
+	@media(max-width: 1020px)
+		{
+			flex-basis: calc(100% - 410px);			
+		}
 	&--left
 	{
 		margin-left: 72px;
+		@media(max-width: 800px)
+		{
+			margin: 0;
+		}
 	}
 	&__name 
 	{
@@ -95,15 +121,20 @@ h3
 		font-size: 18px;
 		letter-spacing: 1.4px;
 		margin-top: 1px;
-		margin-bottom: 30px;		
+		margin-bottom: 30px;
+		@media(max-width: 400px)
+		{
+			font-size: 14px;
+		}		
 	}
 	&__name_top 
 	{
-		padding-top: 16px;
+		padding-top: 23px;
+		line-height: 6px;
 		&--left
 		{
 			padding-top: 0;
-			margin-bottom: 18px;
+			margin-bottom: 28px;
 		}
 	}
 	&__title 
@@ -112,6 +143,10 @@ h3
 		font-weight: 700;
 		letter-spacing: 1.8px;
 		margin-bottom: 40px;
+		@media(max-width: 400px)
+		{
+			font-size: 24px;
+		}
 		&--left
 		{
 			margin-bottom: 50px;
@@ -123,6 +158,10 @@ h3
 			color: $accent-color;
 			font-size: 18px;
 			margin-top: 9px;
+			@media(max-width: 400px)
+			{
+				font-size: 10px;
+			}
 		}
 	}
 	&__litle_title
@@ -137,6 +176,11 @@ h3
 		margin-bottom: 24px;
 		padding-right: 65px;
 		letter-spacing: 0.75px;
+		@media(max-width: 400px)
+			{
+				font-size: 12px;
+				padding: 0;
+			}
 		&--left
 		{
 			letter-spacing: 0;
@@ -175,15 +219,44 @@ h3
 {
 	display: flex;
 	justify-content: space-between;
+	@media(max-width: 800px)
+	{
+		flex-direction: column;
+	}
 	&-demo 
 	{
 		display: block;
-		width: 446px;
-		height: 641px;
+	    width: 444px;
+    	height: 637px;
 		background-image: url(../img/book.svg);		
 		background-repeat: no-repeat;
-		flex-basis: 500x;
+		flex-basis: 444px;
 		position: relative;
+		@media(max-width: 1020px)
+		{
+			width: 346px;
+			height: 541px;
+			flex-basis: 541px;
+		}
+		@media(max-width: 800px)
+		{
+			width: 444px;
+			height: 637px;
+			flex-basis: 637px;
+			margin: 0 auto 40px;
+		}
+		@media(max-width: 640px)
+		{
+			width: 346px;
+			height: 541px;
+			flex-basis: 541px;
+		}
+		@media(max-width: 400px)
+		{
+			width: 280px;
+			height: 429px;
+			flex-basis: 429px;
+		}
 		&__author
 		{
 			position: absolute;
@@ -192,6 +265,11 @@ h3
 			left: 132px;
 			font-size: 36px;
 			letter-spacing: 0.6px;
+			@media(max-width: 400px)
+			{
+				font-size: 24px;
+				left: 77px;
+			}
 			&>span
 			{
 				display: block;
@@ -202,6 +280,10 @@ h3
 				color: $accent-color;
 				font-weight: 400;
 				letter-spacing: 0.7px;
+				@media(max-width: 400px)
+				{
+					font-size: 10px;
+				}
 			}
 		}
 		&>p 
@@ -210,55 +292,178 @@ h3
 			bottom: 41px;
 			left: 83px;
 			color: $accent-color;
+			@media(max-width: 400px)
+			{
+				font-size: 10px;
+			}
 		}
 	}	
 }
 .page 
 {
-	padding-top: 160px;
+	padding: 160px 0;
+	position: relative;
+	@media(max-width: 920px)
+	{
+		padding: 80px 0;
+	}
+	@media(max-width: 400px)
+	{
+		padding: 30px 0;
+	}
 	&_gray 
 	{
 		background-color: $bg-light-color;
 	}
 	&__title 
 	{
+		margin-top: -23px;
 		font-size: 48px;
 		text-align: center;
 		letter-spacing: 2px;
+		@media(max-width: 400px)
+		{
+			font-size: 24px;
+		}
 	}
 	&__subtitle 
 	{
 		color: $accent-color;
 		text-align: center;	
-		letter-spacing: 2.2px;	
+		letter-spacing: 2.2px;
+		@media(max-width: 640px)
+		{
+			font-size: 10px;
+		}
+	}
+	&__svg
+	{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		@media(max-width: 920px)
+		{	
+			display: none;
+		}
 	}
 }
 .book-author 
 {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 135px;
+	margin-bottom: -20px;
+	@media(max-width: 800px)
+	{
+		flex-direction: column-reverse;
+	}
+	&--left
+	{
+		@media(max-width: 800px)
+		{
+			flex-direction: column;
+		}
+	}
 }
 .block-ava 
 {
 	position: relative;
+	@media(max-width: 800px)
+	{
+		margin-bottom: 60px;
+	}
 	&__svg 
 	{
-		position: absolute;
+		position: absolute;	
 		right: 0;
 		z-index: -1;
+		width: 435px;
+		height: 558px;
+		background: linear-gradient(to top left, #59C2AE, #446A87);
+		@media(max-width: 1020px)
+		{
+			width: 327px;
+			height: 518px;
+		}
+		@media(max-width: 800px)
+		{
+			left: 0;
+			width: 435px;
+			height: 558px;
+		}
+		@media(max-width: 640px)
+		{
+			width: 327px;
+			height: 518px;
+		}
+		@media(max-width: 400px)
+		{
+			width: 100%;
+			height: 100%;
+		}
 		&--left
 		{
 			left: 0;
+			width: 435px;
+			height: 705px;
+			@media(max-width: 1020px)
+			{
+				width: 327px;
+				height: 628px;
+			}
+			@media(max-width: 800px)
+			{
+				width: 435px;
+				height: 705px;
+			}
 		}
 	}
 	&__img 
 	{
 		padding-top: 50px;
 		padding-right: 40px;
+		width: 440px;
+		height: 465px;
+		@media(max-width: 1020px)
+		{
+			width: 329px;
+			height: 422px;
+		}
+		@media(max-width: 800px)
+		{
+			left: 0;
+			width: 440px;
+			height: 465px;
+			padding-left: 48px;
+		}
+		@media(max-width: 640px)
+		{
+			width: 329px;
+			height: 422px;
+		}
+		@media(max-width: 400px)
+		{
+			width: 220px;
+			height: 324px;
+			margin: 20px auto;
+		}
 		&--left
 		{
 			padding-left: 48px;
+			width: 440px;
+			height: 603px;
+			@media(max-width: 1020px)
+			{
+				width: 327px;
+				height: 531px;
+			}
+			@media(max-width: 800px)
+			{
+				left: 0;
+				width: 440px;
+				height: 603px;	
+			}
 		}
 	}
 }
@@ -267,12 +472,20 @@ h3
 	display: flex;
 	justify-content: space-around;
 	margin-top: 160px;
-	padding-bottom: 135px;
+	@media(max-width: 800px)
+	{
+		flex-direction: column;
+		margin-top: 40px;
+	}
 	&__paragraph 
 	{
 		font-family: 'Open Sans', serif;
 		text-align: center;
 		font-size: 18px;
+		@media(max-width: 400px)
+		{
+			font-size: 14px;
+		}
 		span 
 		{
 			font-family: 'Roboto Slab', serif;
@@ -281,6 +494,10 @@ h3
 			color: $accent-color;
 			font-size: 80px;
 			margin-bottom: 12px;
+			@media(max-width: 400px)
+			{
+				font-size: 36px;
+			}
 		}
 	}
 }
@@ -289,15 +506,32 @@ h3
 	display: flex;
 	justify-content: space-between;
 	margin-top: 82px;
-	padding-bottom: 252px;
+	padding-bottom: 94px;
+	@media(max-width: 920px)
+	{
+		flex-direction: column;
+		padding: 0;
+	}
+	@media(max-width: 400px)
+	{
+		margin-top: 30px;
+	}
 	h3 
 	{
 		margin-bottom: 15px;
 		padding-left: 71px;
 		letter-spacing: 0.9px;
+		@media(max-width: 400px)
+		{
+			font-size: 24px;
+		}
 	}
 	p {
 		font-family: 'Open Sans', serif;
+		@media(max-width: 400px)
+		{
+			font-size: 12px;
+		}
 	}
 	&__text 
 	{
@@ -347,6 +581,14 @@ h3
 			padding: 10px 0 0 69px;
 			counter-reset: list;
 			column-count: 2;
+			@media(max-width: 800px)
+			{
+				column-count: 1;
+			}
+			@media(max-width: 400px)
+			{
+				padding: 10px 0 0 0;
+			}
 			&>li 
 			{
 				position: relative;
@@ -402,13 +644,22 @@ h3
 		{
 			font-size: 48px;
 			letter-spacing: 1.8px;
+			margin-top: -11px;
+			@media(max-width: 400px)
+			{
+				font-size: 24px;
+			}
 			&>span
 			{
 				display: block;
 				font-size: 18px;
 				color: $accent-color;
 				padding: 10px;
-				letter-spacing: 0.8px
+				letter-spacing: 0.8px;
+				@media(max-width: 400px)
+				{
+					font-size: 10px;
+				}
 			}
 		}
 	}
@@ -416,6 +667,13 @@ h3
 	{
 		display: flex;
 		justify-content: space-around;
+		@media(max-width: 920px)
+		{
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			padding: 0 auto;
+		}
 	}
 	&__btn
 	{
@@ -429,22 +687,40 @@ h3
 		text-align: center;
 		font-weight:18px;
 		padding: 15px 0;
-		margin-top: 91px;
-		margin-left: 484px;
+		margin: 91px auto;
+		/*margin-top: 91px;
+		margin-left: 484px;*/
 		letter-spacing: 0.75px;
 		box-shadow: 0 2px 0 #b2f1be;
+		@media(max-width: 400px)
+		{
+			margin: 25px auto;
+		}
 	}
 }
 .books
 {
 	margin-top: 63px;
+	@media(max-width:920px)
+	{
+		display: flex;
+	}
+	@media(max-width: 640px)
+	{
+		display: block;
+	}
+	@media(max-width: 400px)
+	{
+		margin-top: 25px;
+	}
 	&__demo
 	{
 		display: block;
 		position: relative;
+		margin-top: 13px;
 		width: 270px;
 		height: 410px;
-		background-image: url(../img/book_img.svg);
+		background-image: url(../img/book_img.svg);	
 		&_author
 		{
 			position: absolute;
@@ -452,7 +728,7 @@ h3
 			left: 80px;
 			color: $light-color;
 			text-transform: uppercase;
-			letter-spacing: 1.7px;
+			letter-spacing: 1.7px;		
 			&>span 
 			{
 				color: $accent-color;
@@ -478,10 +754,23 @@ h3
 			display: block;
 			width: 310px;
 			padding-top: 34px;
+			@media(max-width:920px)
+			{
+				display: inline;
+				margin: 65px auto;
+			}
+			@media(max-width: 640px)
+			{
+				padding: 65px auto;
+			}
 			&>h3 
 			{
 				text-align: center;
 				letter-spacing: 0.6px;
+				@media(max-width: 400px)
+			{
+				font-size: 24px;
+			}
 			}
 			&>p 
 			{
@@ -490,6 +779,10 @@ h3
 				font-family: 'Open Sans', serif;
 				font-size: 15px;
 				line-height: 25px;
+				@media(max-width: 400px)
+				{
+					font-size: 12px;
+				}
 			}
 			&>a 
 			{
@@ -503,13 +796,16 @@ h3
 }
 .block-blog
 {
-	padding-bottom: 160px;
 	&__title
 	{
 		font-size: 48px;
 		text-align: center;
 		letter-spacing: 2px;
 		margin-bottom: 86px;
+		@media(max-width: 400px)
+		{
+			font-size: 24px;
+		}
 		&>span
 		{
 			display: block;
@@ -520,16 +816,28 @@ h3
 			color: $accent-color;
 			font-weight: 400;
 			letter-spacing: 0.6px;
+			@media(max-width: 400px)
+			{
+				font-size: 10px;
+			}
 		}
 	}
 	&__conteiner
 	{
 		display: flex;
 		justify-content: space-between;
+		@media(max-width: 920px)
+		{
+			flex-direction: column;
+		}
 		&-post
 		{
 			display: block;
 			width: 372px;
+			@media(max-width: 920px)
+			{
+				width: 100%;
+			}
 			&-img
 			{
 				display: block;
@@ -537,6 +845,12 @@ h3
 				height: 225px;
 				overflow: hidden;
 				position: relative;
+				@media(max-width: 1020px)
+				{
+					width: 290px;
+					height: 173px;
+					margin: 0 auto;	
+				}				
 				img
 				{
 					width: 370px;
@@ -546,6 +860,18 @@ h3
 					top: 50%;
 					transform: translate(-50%, -50%);
 					object-fit: cover;
+					@media(max-width: 1020px)
+					{
+						width: 270px;
+						height: 173px;
+						margin: 0 auto;
+					}
+					@media(max-width: 920px)
+					{
+						width: 370px;
+						height: 225px;
+						margin: 0 auto;	
+					}
 				}
 			}
 			&>h4 
@@ -554,12 +880,20 @@ h3
 				font-weight: bold;
 				margin-top: 16px;
 				letter-spacing: 0.9px;
+				@media(max-width: 1020px)
+				{
+					text-align: center;
+				}
 			}
 			&>a 
 			{
 				display: block;
 				margin-top: 8px;
 				margin-bottom: 18px;
+				@media(max-width: 1020px)
+				{
+					text-align: center;
+				}
 				&>span
 				{
 					text-transform: none;
@@ -568,12 +902,25 @@ h3
 					color: $accent-color;
 					font-weight: 400;
 					letter-spacing: 0.6px;
+					@media(max-width: 1020px)
+					{
+						text-align: center;
+					}
 				}			
 			}
 			&>p 
 			{
 				letter-spacing: 0.9px;
 				line-height: 24px;
+				@media(max-width: 1020px)
+				{
+					margin: 0 auto 40px auto;
+					max-width: 540px;
+				}
+				@media(max-width: 400px)
+				{
+					font-size: 12px;
+				}
 			}				
 		}
 	}
@@ -589,16 +936,22 @@ h3
 		text-align: center;
 		font-weight:18px;
 		padding: 15px 0;
-		margin-top: 91px;
-		margin-left: 484px;
+		margin: 91px auto 0 auto;		
 		letter-spacing: 0.75px;
 		box-shadow: 0 2px 0 #b2f1be;
+		@media(max-width: 920px)
+		{
+			margin: 10px auto 0 auto;	
+		}
 	}
 }
 .block-subscrible
 {
-	display: flex;
-    padding-bottom: 139px;
+	display: flex; 
+	@media(max-width: 920px)
+	{
+		flex-direction: column;
+	}
 	&-item
 	{
 		flex-basis: 49%;
@@ -610,12 +963,21 @@ h3
 			font-size: 48px;
 			text-align: left;
 			letter-spacing: 2px;
+			margin-top: -9px;
+			@media(max-width: 400px)
+			{
+				font-size: 24px;
+			}
 		}
 		&>p 
 		{	
 			margin-top: 8px;	
 			letter-spacing: 0.64px;
-			line-height: 24px;		
+			line-height: 24px;	
+			@media(max-width: 400px)
+			{
+				font-size: 12px;
+			}	
 		}
 	}
 	&__input
@@ -636,7 +998,15 @@ h3
 		{
 			outline: none;
 			padding-left: 30px;
-		}		
+		}
+		@media(max-width: 920px)
+		{
+			width: 95%;
+		}	
+		@media(max-width: 400px)
+		{
+			margin-left: 0;
+		}
 	}
 	&__btn
 	{
@@ -654,6 +1024,14 @@ h3
 		letter-spacing: 0.75px;
 		box-shadow: 0 2px 0 #b2f1be;
 		border: none;
+		@media(max-width: 920px)
+		{
+			width: 95%;
+		}
+		@media(max-width: 400px)
+		{
+			margin-left: 0;
+		}
 	}	
 }
 .footer
@@ -661,27 +1039,52 @@ h3
 	background-color: $bg-dark-color;
 	color: $gray-color;
 	padding: 160px 0;
+	@media(max-width: 920px)
+	{
+		padding: 80px 0;
+	}
+	@media(max-width: 400px)
+	{
+		padding: 30px 0;
+	}
 }
 .block-footer
 {
 	display: flex;
 	justify-content: space-between;
+	@media(max-width: 800px)
+	{
+		flex-direction: column;		
+	}
 	&>div
 	{
-		flex-basis: 30%;	
+		flex-basis: 100%;	
+		@media(max-width: 800px)
+		{
+			margin: 20px auto;
+			width: 95%;		
+		}
 	}
 	&__logo
 	{
 		display: block;
 		width: 137px;
 		height: 28px;
-		padding-bottom: 15px; 
+		padding-bottom: 15px;
+		@media(max-width: 800px)
+		{
+			width: 95%;		
+		}
 		&>p 
 		{
 			font-size: 15px;
 			padding-top: 8px;
 			letter-spacing: 0.2px;
 			line-height: 23px;
+			@media(max-width: 400px)
+			{
+				font-size: 12px;
+			}
 		}
 	}
 	&__title
@@ -694,6 +1097,10 @@ h3
 		text-transform: uppercase;
 		letter-spacing: 0.9px;
 		line-height: 23px;
+		@media(max-width: 800px)
+		{
+			padding-left: 0;		
+		}
 	}
 	&__list
 	{
@@ -701,12 +1108,24 @@ h3
 		padding-left: 85px;
 		letter-spacing: 0.8px;
 		line-height: 27px;
+		@media(max-width: 800px)
+		{
+			padding-left: 0;		
+		}
+		@media(max-width: 400px)
+		{
+			font-size: 12px;
+		}
 	}
 	&__social
 	{
 		display: flex;
 		list-style-type: none;
 		padding-left: 85px;
+		@media(max-width: 800px)
+		{
+			padding-left: 0;		
+		}
 		&>li 
 		{
 			margin-right: 15px;
@@ -720,13 +1139,23 @@ h3
 .block-carusel
 {
 	text-align: center;
+	position: relative;
+	@media(max-width: 920px)
+	{	
+		background-color: $bg-dark-color;
+		padding: 30px 0;
+	}
 	h3 
 	{
 		color: $accent-color;
 		margin-top: 26px;
 		letter-spacing: 1.2px;
+		@media(max-width: 400px)
+		{
+			font-size: 24px;
+		}
 	}
-	&__expert
+		&__expert
 	{
 		margin-bottom: 34px;
 		margin-top: 7px;
@@ -734,11 +1163,15 @@ h3
 	}
 	p 
 	{
-		color: $gray-color;
-		padding: 0 213px;
-		/*max-width: 600px;*/
+		color: $gray-color;		
+		margin: 0 auto;
+		max-width: 600px;
 		letter-spacing: 0.6px;
 		line-height: 25px;
+		@media(max-width: 400px)
+		{
+			font-size: 12px;
+		}
 	}
 	&-thumb
 	{
